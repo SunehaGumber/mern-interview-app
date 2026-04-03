@@ -85,7 +85,7 @@ const Home = () => {
         
         <div className="component-reports">
            <h2>My recent reports</h2>
-          {allReports.length > 0 && (
+          {allReports?.length > 0 && (
             
             <div className="recent-reports">
              

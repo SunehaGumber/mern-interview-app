@@ -271,11 +271,11 @@ const Interview = () => {
   const meta = {
     technical: {
       title: "Technical Questions",
-      badge: `${viewReport.technicalQuestions.length} questions`,
+      badge: `${viewReport.technicalQuestions?.length} questions`,
     },
     behavioral: {
       title: "Behavioral Questions",
-      badge: `${viewReport.behavioralQuestions.length} questions`,
+      badge: `${viewReport.behavioralQuestions?.length} questions`,
     },
     roadmap: {
       title: "Preparation Road Map",
