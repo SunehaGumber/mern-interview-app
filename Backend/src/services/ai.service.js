@@ -2,7 +2,8 @@ import { GoogleGenAI } from "@google/genai";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import config from "../config/config.js";
-import puppeteer from "puppeteer";
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
 
 const ai = new GoogleGenAI({
   apiKey: config.GOOGLE_GENAI_API_KEY,
@@ -107,8 +108,6 @@ async function generateInterviewReport({
   return JSON.parse(response.text);
 }
 
-import puppeteer from 'puppeteer-core';
-import chromium from '@sparticuz/chromium';
 
 async function generatePdfFromHtml(htmlContent) {
   const browser = await puppeteer.launch({
