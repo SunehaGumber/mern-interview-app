@@ -119,11 +119,15 @@ async function generatePdfFromHtml(htmlContent) {
 
   const page = await browser.newPage();
   await page.setContent(htmlContent, {
-    waitUntil: "networkidle2",
+    waitUntil: "domcontentloaded",  // change from networkidle2
   });
+
+  // wait a bit for any inline styles to apply
+  await new Promise(resolve => setTimeout(resolve, 500));
 
   const pdfBuffer = await page.pdf({
     format: "A4",
+    printBackground: true,   // add this so background colors render
     margin: {
       top: "20mm",
       left: "20mm",
