@@ -49,8 +49,10 @@ This project helps users prepare for job interviews and gives companies a smarte
     MongoDB + Mongoose
     JWT Authentication
     Multer
-    OpenAI / LLM integration
+    GenAi
+    
 📁 Project Folder Structure
+
     project/
     │── Backend/
     │   ├── src/
