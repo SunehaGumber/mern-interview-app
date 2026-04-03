@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://mern-interview-app-5upc.vercel.app",
+    origin: "https://mern-interview-app.vercel.app",
     credentials:true
 }));
 
