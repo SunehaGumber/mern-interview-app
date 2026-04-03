@@ -117,17 +117,29 @@ async function generatePdfFromHtml(htmlContent) {
     headless: chromium.headless,
   });
 
+  const fullHtml = `<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; }
+      </style>
+    </head>
+    <body>${htmlContent}</body>
+  </html>`;
+
   const page = await browser.newPage();
-  await page.setContent(htmlContent, {
-    waitUntil: "domcontentloaded",  // change from networkidle2
+  await page.setContent(fullHtml, {
+    waitUntil: "domcontentloaded",
   });
 
-  // wait a bit for any inline styles to apply
   await new Promise(resolve => setTimeout(resolve, 500));
 
   const pdfBuffer = await page.pdf({
     format: "A4",
-    printBackground: true,   // add this so background colors render
+    printBackground: true,
     margin: {
       top: "20mm",
       left: "20mm",
