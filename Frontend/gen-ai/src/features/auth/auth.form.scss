@@ -1,37 +1,58 @@
-main{
-    min-height:100vh;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
 
-    .form-container{
-        min-width: 350px;
-        display:flex;
-        flex-direction:column;
-        gap:1rem;
+    .form-container {
+        width: 100%;
+        max-width: 420px;
+        min-width: 0; // removes the fixed 350px floor on small screens
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
-    form{
-        display:flex;
-        flex-direction:column;
-        gap:0.75rem;
-    }
-    .input-group{
-        display:flex;
-        flex-direction:column;
-        gap:0.75rem;
-        margin-bottom:15px;
 
-        input{
-            border:none;
-            outline:none;
-            padding-inline:1rem;
-            padding-block:0.75rem;
-            border-radius:0.75rem;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 15px;
+
+        input {
+            border: none;
+            outline: none;
+            padding-inline: 1rem;
+            padding-block: 0.75rem;
+            border-radius: 0.75rem;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px; // prevents iOS zoom on focus
+            -webkit-appearance: none;
         }
     }
-    a{
-        color:#e1034d;
-        text-decoration:none;
+
+    a {
+        color: #e1034d;
+        text-decoration: none;
+    }
+
+    // narrow phones
+    @media (max-width: 480px) {
+        align-items: flex-start;
+        padding-top: 2.5rem;
+
+        .form-container {
+            gap: 0.75rem;
+        }
     }
 }
