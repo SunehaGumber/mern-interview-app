@@ -49,7 +49,7 @@ const selfDescription = `
  I am a MERN stack developer with strong problem-solving skills. I enjoy working on real projects where I can build both frontend and backend features. I have hands-on experience with authentication, building dashboards, and working with APIs. I’m open to learning new technologies, and I am specifically improving my system design and TypeScript skills. My strengths include clean code, fast debugging, and team collaboration.`
 
 const jobDescription = `
-Role: MERN Stack Developer
+Role: Full Stack Developer
 Company: TechNova Solutions
 
 Responsibilities

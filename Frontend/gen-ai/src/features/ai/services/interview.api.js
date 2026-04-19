@@ -11,15 +11,11 @@ export async function generateReport({ resumeFile, selfDescription, jobDescripti
     formData.append("selfDescription", selfDescription);
     formData.append("resume",resumeFile)
     try {
-        console.log("inside api");
-        console.log("calling api");
         const response = await api.post('/api/interview', formData,{
             headers: {
                "Content-Type":"multipart/form-data"
             }
         })
-        console.log("api called",response);
-
         return response.data
     } catch (err) {
         console.log(err);

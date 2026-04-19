@@ -105,6 +105,7 @@ async function generateInterviewReport({
       responseSchema: zodToJsonSchema(interviewReportSchema),
     },
   });
+  console.log(response.text);
   return JSON.parse(response.text);
 }
 

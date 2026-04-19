@@ -22,7 +22,6 @@ export const useInterview = () => {
     jobDescription,
     selfDescription,
   }) => {
-      console.log("inside hook");
       setLoading(true);
       let response;
     try {

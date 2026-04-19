@@ -52,6 +52,7 @@ This project helps users prepare for job interviews and gives companies a smarte
     
 📁 Project Folder Structure
 
+
 project/
 │── Backend/
 │   ├── src/
@@ -116,7 +117,7 @@ Delivered as a blob via:
 
 POST /api/interview/pdf/:interviewReportId
 
-🤝 Contributing
+🤝 Contributing 
 
 Contributions and suggestions are welcome!
 Feel free to fork the repo and submit a pull request.

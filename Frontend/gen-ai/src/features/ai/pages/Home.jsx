@@ -16,7 +16,6 @@ const Home = () => {
     const resumeFile = resumeInputRef.current.files[0];
     
     const data = await handleGenerateReport({ resumeFile, jobDescription, selfDescription });
-    console.log(data);
     navigate(`/interview/${data._id}`)
   }
   if (loading) {
